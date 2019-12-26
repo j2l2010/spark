@@ -1,0 +1,6 @@
+安装spark，以及安装过程中出现的坑：
+1. 在官网下载spark压缩包2.4.4，解压到本地任意目录
+2. 运行spark-shell --master [2] 报错：ERROR Shell: Failed to locate the winutils binary in the hadoop binary path
+   原因：缺少hadoop的hadoop-common-2.2.0-bin-master依赖包
+   解决：下载hadoop-common-2.2.0-bin-master并解压到任意目录，配置环境变量HADOOP_HOME指向解压的目录，问题解决
+   注意：IDEA一定要重启下，而且要把所有的IDEA窗口全部关闭再重启
